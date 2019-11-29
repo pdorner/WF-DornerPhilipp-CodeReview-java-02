@@ -1,8 +1,12 @@
 package coderiview2;
 
+import java.util.ArrayList;
+
 public class Main {
 
 	public static void main(String[] args) {
+		//------------------------------------------------------------------------------------
+		//Creat Exercise and push to Array
 		Exercise e1 = new Exercise ("Push-ups", "Place your hands on the floor. Raise up onto your toes so that all of your body weight is on your hands and your feet. \n"
 				+ "Bend your elbows and lower your chest down toward the floor. Then, push off the floor and extend them so that you return to starting position.", 30, false);
 		Exercise e2 = new Exercise ("Planks", "Start on the floor on your hands and knees. Lower your forearms to the floor with elbows positioned under your shoulders and your hands shoulder-width apart. \n"
@@ -20,7 +24,8 @@ public class Main {
 		for (Exercise e : exarr) {
 			e.print();
 		}
-		
+		//------------------------------------------------------------------------------------
+		// Floor Exercises
 		System.out.println("--------------------------------------------------------------");
 		System.out.println("Exercises on the floor");
 		for (Exercise e : exarr) {
@@ -29,7 +34,8 @@ public class Main {
 			
 			
 		}
-		
+		//------------------------------------------------------------------------------------
+		//Floor and longer than 60 sec
 		System.out.println("--------------------------------------------------------------");	
 		System.out.println("Exercises that are on the floor and take more than a minute");
 		for (Exercise e : exarr) {
@@ -38,7 +44,27 @@ public class Main {
 		}
 		System.out.println("--------------------------------------------------------------");	
 
+		System.out.println("Interval Workout STARTS !!!!");
 		
+		
+		//------------------------------------------------------------------------------------
+		//Bonus
+		IntervalWorkout iw = new IntervalWorkout(4, 30);
+		iw.getExerarr().add(e1);
+		iw.getExerarr().add(e3);
+		iw.getExerarr().add(e2);
+		for (int i = 0; i<= iw.getRounds();i++) {
+			System.out.println("*****************************\r\n" + 
+		"=============================\r\nROUND: " + i);
+			for (Exercise e : iw.getExerarr()) 
+				System.out.println(e.getName());			
+			System.out.println("=============================\r\n" + 
+					"DO THE BREAK (for " + iw.getBreaktime() + " sec)\r\n" + 
+					"=============================");
+		}
+
 	}
+	
+	
 
 }
