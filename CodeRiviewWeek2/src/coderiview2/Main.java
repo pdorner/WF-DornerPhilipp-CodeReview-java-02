@@ -16,19 +16,19 @@ public class Main {
 		Exercise e6 = new Exercise ("Sidewards Back Stretch", "Go into standing position, put your hands on your hips and then stretch with one hand over your head to the opposite side. Repeat with other hand.", 60, true);
 		Exercise [] exarr = {e1, e2, e3, e4, e5, e6};
 		System.out.println("--------------------------------------------------------------");
-//		System.out.println("All Exercises");
-//		for (Exercise e : exarr) {
-//			e.print();
-//		}
-//		
-//		System.out.println("--------------------------------------------------------------");
-//		System.out.println("Exercises on the floor");
-//		for (Exercise e : exarr) {
-//			if (!e.isPostion()) 
-//				e.print();			
-//			
-//			
-//		}
+		System.out.println("All Exercises");
+		for (Exercise e : exarr) {
+			e.print();
+		}
+		
+		System.out.println("--------------------------------------------------------------");
+		System.out.println("Exercises on the floor");
+		for (Exercise e : exarr) {
+			if (!e.isPostion()) 
+				e.print();			
+			
+			
+		}
 		
 		System.out.println("--------------------------------------------------------------");	
 		System.out.println("Exercises that are on the floor and take more than a minute");
@@ -38,6 +38,7 @@ public class Main {
 		}
 		System.out.println("--------------------------------------------------------------");	
 
+		
 	}
 
 }
